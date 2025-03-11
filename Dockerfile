@@ -1,4 +1,4 @@
-FROM python:3.12.4-slim
+FROM python:3.12.8-slim
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=off \
@@ -13,5 +13,5 @@ RUN apt-get update \
     curl \
     build-essential \
     git \ 
-    && curl -sSL https://install.python-poetry.org | python3 - --version 1.8.3 \
-    && pip install -U pip
+    && pip install -U pip \
+    && pip install poetry
